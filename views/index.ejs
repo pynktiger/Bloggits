@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/index.css">
+<%- include("partials/header.ejs") %>
+
+<h1>Your Blogs:</h1>
+<form action="/new-blog">
+    <input type="submit" value="New Blog">
+</form>
+
+<ul>
+    <% blogs.forEach(function(blog) { %>
+        <% if(blog.title && blog.comment) {%>
+        <li><a href="<%= blog.url %>"><%= blog.title %></a></li>
+   <% } %>
+   <% }) %>
+</ul>
+
+
+<%- include("partials/footer.ejs") %>

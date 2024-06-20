@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/index.css">
+<%- include('partials/header.ejs') %>
+
+<h1>write your blog:</h1>
+<form action="/new-blog" method="post">
+    <input name="title" type="text" class="feedback-input" placeholder="Title" />
+    <textarea name="comment" class="feedback-input" placeholder="Comment"></textarea>
+    <input type="submit" value="Publish" />
+</form>
+
+<%- include('partials/footer.ejs') %>
